@@ -1,0 +1,14 @@
+[Unit]
+Description=Airpods mute
+StartLimitBurst=7
+StartLimitIntervalSec=33
+
+[Service]
+Type=simple
+Environment=DISPLAY=:0
+ExecStart=%h/bin/airpods-mute.sh
+Restart=always
+RestartSec=5
+
+[Install]
+WantedBy=default.target
