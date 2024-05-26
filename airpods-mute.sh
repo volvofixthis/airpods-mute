@@ -15,9 +15,11 @@ function toggle_mic() {
         VOLUME="0%"
     fi
     amixer set Capture $VOLUME
-    mpg123 ~/Documents/$SOUND.mp3
+    mpg123 ~/Documents/airpods-mute/$SOUND.mp3
 }
 
 journalctl -f --user -u wireplumber | while IFS= read -r line; do
-    echo "$line" | grep "<< AT+CHUP" && toggle_mic
+    if [[ "$line" == *"<< AT+CHUP"* ]]; then
+        toggle_mic
+    fi
 done

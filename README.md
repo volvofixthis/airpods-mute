@@ -13,6 +13,8 @@ mkdir -p ~/.config/systemd/user
 cp airpods-mute.service ~/.config/systemd/user
 systemctl enable airpods-mute
 systemctl start airpods-mute
+mkdir -p ~/Documents/airpods-mute
+cp sounds/* ~/Documents/airpods-mute/
 ```
 
 ### Wireplumber
@@ -23,5 +25,4 @@ Environment=WIREPLUMBER_NO_PW_LOG=1
 ```
 
 ### Deps
-You need to install aplay, mpg123, journalctl  
-Don't forget about your own, custom sounds to mute and unmute
+You need to install amixer, mpg123, journalctl  
