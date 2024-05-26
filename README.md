@@ -1,9 +1,9 @@
 ### What is it?
 This daemon is used to control system microphone via Airpods button.  
 You need to click button too times to mute.  
-This will work in HFP/HSP profile. For example if you are in a call, 
-you can click button to mute yourself.  
-This is POC, but it works ;)  
+This will work in HFP/HSP profile. For example if you are in a Zoom/slack/WhatApp call, 
+so you can click button on your AirPods to mute yourself.  
+This is POC, but it works very well ;)  
 
 ### Install
 ```bash
