@@ -7,22 +7,12 @@ This is POC, but it works very well ;)
 
 ### Install
 ```bash
-mkdir -p ~/bin
-cp airpods-mute.sh ~/bin
-mkdir -p ~/.config/systemd/user
-cp airpods-mute.service ~/.config/systemd/user
-systemctl enable airpods-mute
-systemctl start airpods-mute
-mkdir -p ~/Documents/airpods-mute
-cp sounds/* ~/Documents/airpods-mute/
-```
-
-### Wireplumber
-Add this envs to wireplumber user service:  
-```lua
-Environment=PIPEWIRE_DEBUG=spa.bluez5.native:4
-Environment=WIREPLUMBER_NO_PW_LOG=1
+make install
 ```
 
 ### Deps
-You need to install amixer, mpg123, journalctl  
+You need to install amixer and mpg123.  
+#### Fedora
+```bash
+sudo dnf install alsa-utils mpg123
+```
