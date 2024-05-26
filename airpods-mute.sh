@@ -1,7 +1,4 @@
 #!/bin/bash
-# You need add such vars into wireplumber.service
-# Environment=PIPEWIRE_DEBUG=spa.bluez5.native:4
-# Environment=WIREPLUMBER_NO_PW_LOG=1
 set -xe
 VOLUME="0%"
 amixer set Capture $VOLUME
